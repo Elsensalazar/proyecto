@@ -1,0 +1,252 @@
+/* Todo listo aca */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Segoe UI', sans-serif;
+background-color: #eaf4f4;
+color: #1d2d2c;
+line-height: 1.6;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+ul {
+list-style: none;
+}
+
+nav {
+background-color: #fff3e0;
+padding: 1rem;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+list-style: none;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 20px;
+}
+
+nav a {
+text-decoration: none;
+color: black;
+font-weight: bold;
+transition: color 0.3s;
+}
+
+nav a:hover {
+color: #ff6f00;
+}
+
+.contenedor {
+max-width: 900px;
+margin: 2rem auto;
+padding: 2rem;
+border: 2px solid #ccc;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+background-color: #f9f9f9;
+}
+
+.formulario {
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+}
+
+.campo {
+display: flex;
+flex-direction: column;
+}
+
+.campo label {
+margin-bottom: 0.5rem;
+font-weight: bold;
+}
+
+.campo input {
+padding: 0.5rem;
+border: 1px solid #ccc;
+border-radius: 8px;
+font-size: 1rem;
+}
+
+.boton-centro {
+text-align: center;
+}
+
+.boton-centro button {
+background-color: #28a745;
+color: white;
+padding: 0.75rem 1.5rem;
+border: none;
+border-radius: 8px;
+font-weight: bold;
+font-size: 1rem;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.boton-centro button:hover {
+background-color: black;
+}
+
+.resultados {
+margin-top: 2rem;
+text-align: center;
+}
+
+.resultados h2 {
+margin-bottom: 1rem;
+font-size: 1.5rem;
+}
+
+.resultados p {
+font-size: 1rem;
+margin-bottom: 2rem;
+}
+
+.graficas {
+display: flex;
+flex-wrap: wrap;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 1.5rem;
+justify-content: center;
+gap: 20px;
+padding: 20px;
+}
+
+canvas {
+width: 100%;
+height: 300px;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+height: auto;
+}
+
+.graficas canvas {
+flex: 0 1 45%;
+max-width: 45%;
+height: 300px !important;
+background-color: #fff;
+border: 1px solid #ddd;
+border-radius: 12px;
+box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+.graficas canvas {
+flex: 1 1 100%;
+max-width: 100%;
+}
+}
+
+.footer {
+background-color: #35afdf;
+color: #fff;
+padding: 2rem 1rem;
+text-align: center;
+}
+
+.footer-content {
+max-width: 900px;
+margin: auto;
+}
+
+.wrapper {
+display: inline-flex;
+list-style: none;
+}
+
+.wrapper .icon {
+position: relative;
+background: black;
+border-radius: 50%;
+padding: 15px;
+margin: 10px;
+width: 50px;
+height: 50px;
+font-size: 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+cursor: pointer;
+transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+position: absolute;
+top: 0;
+font-size: 14px;
+background: #ffffff;
+color: #ffffff;
+padding: 5px 8px;
+border-radius: 5px;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+opacity: 0;
+pointer-events: none;
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+position: absolute;
+content: "";
+height: 8px;
+width: 8px;
+background: #ffffff;
+bottom: -3px;
+left: 50%;
+transform: translate(-50%) rotate(45deg);
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+top: -45px;
+opacity: 1;
+visibility: visible;
+pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.facebook {
+--color: #1877f2;
+}
+
+.twitter {
+--color: #333333;
+}
+
+.instagram {
+--color: #e4405f;
+}
+
+.github {
+--color: #333333;
+}
+
+.telegram {
+--color: #1da1f2;
+}
+
+.icon:hover,
+.icon:hover .tooltip,
+.icon:hover .tooltip::before {
+background: var(--color);
+color: white;
+}

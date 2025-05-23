@@ -1,0 +1,343 @@
+/* Todo listo aca */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: "Segoe UI", sans-serif;
+background-color: #e6f2f0;
+color: #333;
+line-height: 1.6;
+}
+
+nav {
+background-color: #fff3e0;
+padding: 1rem;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+list-style: none;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 20px;
+}
+
+nav a {
+text-decoration: none;
+color: black;
+font-weight: bold;
+transition: color 0.3s;
+}
+
+nav a:hover {
+color: #ff6f00;
+}
+
+.intro {
+text-align: center;
+padding: 2rem 1rem;
+background-color: #c8e6c9;
+}
+
+.intro h1 {
+font-size: 2rem;
+margin-bottom: 1rem;
+color: black;
+}
+
+.bene {
+padding: 2rem 1rem;
+background-color: #f1f8e9;
+text-align: center;
+}
+
+.bene h2 {
+font-size: 1.8rem;
+color: black;
+margin-bottom: 1.5rem;
+}
+
+.bene h2:hover {
+color: #ff6f00;
+}
+
+
+.cards {
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+justify-content: center;
+margin-top: 2rem;
+}
+
+.card {
+background: white;
+padding: 1rem;
+border-radius: 8px;
+width: 220px;
+text-align: center;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+transition: transform 0.3s;
+}
+
+.card:hover {
+transform: translateY(-10px);
+background-color: #a5d6a7;
+}
+
+.cards .card p {
+color: black;
+}
+
+.card p:hover {
+color: #ff6f00;
+}
+
+.card img {
+width: 100%;
+height: 140px;
+object-fit: cover;
+border-radius: 6px;
+margin-bottom: 0.5rem;
+height: 220px;
+}
+
+.card p {
+margin: 0;
+font-weight: bold;
+color: #2e7d32;
+}
+
+.contenedor {
+display: flex;
+height: 100vh;
+overflow: hidden;
+}
+
+.caja {
+flex: 1;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+overflow: hidden;
+margin: 20px;
+}
+
+.izquierda::before,
+.derecha::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-size: cover;
+background-position: center;
+transition: transform 0.5s ease;
+z-index: -1;
+}
+
+.izquierda::before {
+background-image: url('Imagenes/img.jpg');
+}
+
+.derecha::before {
+background-image: url('Imagenes/img1.jpg');
+}
+
+.caja:hover::before {
+transform: scale(1.1);
+}
+
+.contenido {
+background: rgba(255, 255, 255, 0.6);
+padding: 20px 20px;
+border-radius: 10px;
+animation: fadeInUp 1s ease forwards;
+opacity: 0;
+}
+
+@keyframes fadeInUp {
+from {
+transform: translateY(20px);
+opacity: 0;
+}
+to {
+transform: translateY(0);
+opacity: 1;
+}
+}
+
+.casos {
+padding: 60px 20px;
+background-color: #f4f9f5;
+text-align: center;
+}
+
+.casos h2 {
+font-size: 2.5rem;
+margin-bottom: 40px;
+color: black;
+animation: fadeIn 1s ease-in-out forwards;
+opacity: 0;
+}
+
+.casos h2:hover {
+color: #00703c;
+}
+
+.caso-card {
+max-width: 600px;
+margin: 20px auto;
+background: white;
+padding: 25px 30px;
+border-radius: 12px;
+box-shadow: 20px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+animation: fadeInUp 1s ease forwards;
+opacity: 0;
+}
+
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: scale(3);
+}
+to {
+opacity: 1;
+transform: scale(1);
+}
+}
+
+.caso-card:hover {
+box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+
+}
+
+.caso-card p {
+font-size: 1.1rem;
+color: #333;
+line-height: 1.6;
+}
+
+.caso-card strong {
+display: block;
+margin-top: 10px;
+color: #00703c;
+}
+
+.footer {
+background-color: #004d40;
+color: white;
+padding: 20px 10px;
+text-align: center;
+}
+
+.footer-content {
+max-width: 900px;
+margin: auto;
+}
+
+.wrapper {
+display: inline-flex;
+list-style: none;
+}
+
+.wrapper .icon {
+position: relative;
+background: white;
+color: black;
+border-radius: 50%;
+padding: 15px;
+margin: 10px;
+width: 50px;
+height: 50px;
+font-size: 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+cursor: pointer;
+transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+position: absolute;
+top: 0;
+font-size: 14px;
+background: #ffffff;
+color: #ffffff;
+padding: 5px 8px;
+border-radius: 5px;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+opacity: 0;
+pointer-events: none;
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+position: absolute;
+content: "";
+height: 8px;
+width: 8px;
+background: #ffffff;
+bottom: -3px;
+left: 50%;
+transform: translate(-50%) rotate(45deg);
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+wrapper .icon:hover .tooltip {
+top: -45px;
+opacity: 1;
+visibility: visible;
+pointer-events: auto;
+}
+wrapper .icon:hover span,
+wrapper .icon:hover .tooltip {
+text-shadow: 0px -1px 0px rgba(7, 6, 6, 0.1);
+}
+
+.facebook {
+--color: #1877f2;
+}
+
+.twitter {
+--color: #333333;
+}
+
+.instagram {
+--color: #e4405f;
+}
+
+.github {
+--color: #333333;
+}
+.telegram {
+--color: #1da1f2;
+}
+
+.icon:hover,
+.icon:hover .tooltip,
+.icon:hover .tooltip::before {
+background: var(--color);
+color: white;
+}

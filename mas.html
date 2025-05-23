@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a class="nav-link" href="index.html">🌿 Inicio</a></li>
+        <li><a class="nav-link active" href="quees.html">¿Qué es?</a></li>
+        <li><a class="nav-link" href="beneficios.html">Beneficios</a></li>
+        <li><a class="nav-link active" aria-current="page" href="mas.html">Mas</a></a></li>
+      </ul>
+    </nav>
+  </header>
+              <div class="contenedor">
+                <div class="formulario">
+                  <div class="campo">
+                    <label for="consumo">⚡Consumo mensual promedio en kWh:</label>
+                    <input type="number" id="consumo">
+                  </div>
+                  <div class="campo">
+                    <label for="costoKwh">💰 Costo por kWh ($):</label>
+                    <input type="number" id="costoKwh">
+                  </div>
+                  <div class="boton-centro">
+                    <button onclick="calcularAhorro()">Calcular Ahorro</button>
+                  </div>
+                </div>
+              
+                <div class="resultados" id="resultados">
+                  <h2>📊 Gráfica de Ahorro Solar</h2>
+                  <p id="resultadoTexto"></p>
+                  <div class="graficas">
+                    <canvas id="graficaBarra"></canvas>
+                    <canvas id="graficaTorta"></canvas>
+                    <canvas id="graficaDoughnut"></canvas>
+                    <canvas id="graficaLinea"></canvas>
+                  </div>
+                </div>
+              </div>
+
+              <footer class="footer">
+                <ul class="wrapper">
+                  <a href="https://www.facebook.com/" target="_blank">
+                  <li class="icon facebook">
+                    <span class="tooltip">Facebook</span>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                  </li></a>
+                  <a href="https://x.com/X." target="_blank">
+                  <li class="icon twitter">
+                    <span class="tooltip">X</span>
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </li></a>
+                  <a href="https://www.instagram.com/" target="_blank">
+                  <li class="icon instagram">
+                    <span class="tooltip">Instagram</span>
+                    <span><i class="fab fa-instagram"></i></span>
+                  </li></a>
+                  <a href="https://github.com/" target="_blank">
+                  <li class="icon github">
+                    <span class="tooltip">Github</span>
+                    <span><i class="fab fa-github"></i></span>
+                  </li></a>
+                  <a href="https://web.telegram.org/" target="_blank">
+                  <li class="icon telegram">
+                    <span class="tooltip">Telegram</span>
+                    <i class="fa-brands fa-telegram"></i>
+                  </li></a>
+                </ul>
+              </footer>
+
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+              <script src="mas.js"></script>
+</body>
+</html>
+
